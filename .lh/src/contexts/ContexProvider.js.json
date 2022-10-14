@@ -1,0 +1,58 @@
+{
+    "sourceFile": "src/contexts/ContexProvider.js",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 10,
+            "patches": [
+                {
+                    "date": 1665624384434,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1665624525470,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,1 +1,10 @@\n-import React, {createContext,useContext, useState } from 'react'\n\\ No newline at end of file\n+import React, { createContext, useContext, useState } from 'react'\r\n+\r\n+const StateContext = createContext()\r\n+\r\n+const initialState = {\r\n+  chat: false,\r\n+  cart: false,\r\n+  userProfile: false,\r\n+  notification: false,\r\n+}\r\n"
+                },
+                {
+                    "date": 1665626635971,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -7,4 +7,6 @@\n   cart: false,\r\n   userProfile: false,\r\n   notification: false,\r\n }\r\n+\r\n+export const ContextPorvider = {}\r\n"
+                },
+                {
+                    "date": 1665629067117,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -8,5 +8,13 @@\n   userProfile: false,\r\n   notification: false,\r\n }\r\n \r\n-export const ContextPorvider = {}\r\n+export const ContextPorvider = ({ children }) => {\r\n+  const [activeMenu, setActiveMenu] = useState(true)\r\n+\r\n+  return (\r\n+    <StateContext.Provider value={{ activeMenu }}>\r\n+      {children}\r\n+    </StateContext.Provider>\r\n+  )\r\n+}\r\n"
+                },
+                {
+                    "date": 1665629134450,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -17,4 +17,6 @@\n       {children}\r\n     </StateContext.Provider>\r\n   )\r\n }\r\n+\r\n+export const useStateContext = () => useContext(StateContext)\r\n"
+                },
+                {
+                    "date": 1665629565220,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -12,9 +12,9 @@\n export const ContextPorvider = ({ children }) => {\r\n   const [activeMenu, setActiveMenu] = useState(true)\r\n \r\n   return (\r\n-    <StateContext.Provider value={{ activeMenu }}>\r\n+    <StateContext.Provider value={{ activeMenu, setActiveMenu }}>\r\n       {children}\r\n     </StateContext.Provider>\r\n   )\r\n }\r\n"
+                },
+                {
+                    "date": 1665641517147,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -11,10 +11,14 @@\n \r\n export const ContextPorvider = ({ children }) => {\r\n   const [activeMenu, setActiveMenu] = useState(true)\r\n \r\n+  const [isClick, setIsClick] = useState(initialState)\r\n+\r\n   return (\r\n-    <StateContext.Provider value={{ activeMenu, setActiveMenu }}>\r\n+    <StateContext.Provider\r\n+      value={{ activeMenu, setActiveMenu, isClick, setIsClick }}\r\n+    >\r\n       {children}\r\n     </StateContext.Provider>\r\n   )\r\n }\r\n"
+                },
+                {
+                    "date": 1665642080276,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -13,8 +13,12 @@\n   const [activeMenu, setActiveMenu] = useState(true)\r\n \r\n   const [isClick, setIsClick] = useState(initialState)\r\n \r\n+  const handleClick = (clicked) => {\r\n+    setIsClick({ ...initialState, [clicked]: true })\r\n+  }\r\n+\r\n   return (\r\n     <StateContext.Provider\r\n       value={{ activeMenu, setActiveMenu, isClick, setIsClick }}\r\n     >\r\n"
+                },
+                {
+                    "date": 1665642101275,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -19,9 +19,9 @@\n   }\r\n \r\n   return (\r\n     <StateContext.Provider\r\n-      value={{ activeMenu, setActiveMenu, isClick, setIsClick }}\r\n+      value={{ activeMenu, setActiveMenu, isClick, setIsClick, handleClick }}\r\n     >\r\n       {children}\r\n     </StateContext.Provider>\r\n   )\r\n"
+                },
+                {
+                    "date": 1665642410067,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -10,9 +10,8 @@\n }\r\n \r\n export const ContextPorvider = ({ children }) => {\r\n   const [activeMenu, setActiveMenu] = useState(true)\r\n-\r\n   const [isClick, setIsClick] = useState(initialState)\r\n \r\n   const handleClick = (clicked) => {\r\n     setIsClick({ ...initialState, [clicked]: true })\r\n"
+                },
+                {
+                    "date": 1665642518407,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -11,16 +11,25 @@\n \r\n export const ContextPorvider = ({ children }) => {\r\n   const [activeMenu, setActiveMenu] = useState(true)\r\n   const [isClick, setIsClick] = useState(initialState)\r\n+  const [screenSize, setScreenSize] = useState(undefined)\r\n \r\n   const handleClick = (clicked) => {\r\n     setIsClick({ ...initialState, [clicked]: true })\r\n   }\r\n \r\n   return (\r\n     <StateContext.Provider\r\n-      value={{ activeMenu, setActiveMenu, isClick, setIsClick, handleClick }}\r\n+      value={{\r\n+        activeMenu,\r\n+        setActiveMenu,\r\n+        isClick,\r\n+        setIsClick,\r\n+        handleClick,\r\n+        screenSize,\r\n+        setScreenSize,\r\n+      }}\r\n     >\r\n       {children}\r\n     </StateContext.Provider>\r\n   )\r\n"
+                }
+            ],
+            "date": 1665624384434,
+            "name": "Commit-0",
+            "content": "import React, {createContext,useContext, useState } from 'react'"
+        }
+    ]
+}

@@ -1,0 +1,26 @@
+{
+    "sourceFile": "src/components/Button.jsx",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 2,
+            "patches": [
+                {
+                    "date": 1665648524066,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1665648745814,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,7 +1,15 @@\n import React from 'react'\r\n \r\n-const Button = ({ bgColorm, color, size, text, borderRadius }) => {\r\n-  return <div>Button</div>\r\n+const Button = ({ bgColor, color, size, text, borderRadius }) => {\r\n+  return (\r\n+    <button\r\n+      type=\"button\"\r\n+      style={{ backgroundColor: bgColor, color, borderRadius }}\r\n+      className={`text-${size}`}\r\n+    >\r\n+      Button\r\n+    </button>\r\n+  )\r\n }\r\n \r\n export default Button\r\n"
+                },
+                {
+                    "date": 1665648782796,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,11 +4,11 @@\n   return (\r\n     <button\r\n       type=\"button\"\r\n       style={{ backgroundColor: bgColor, color, borderRadius }}\r\n-      className={`text-${size}`}\r\n+      className={`text-${size} p-3 hover:drop-shadow-lg`}\r\n     >\r\n-      Button\r\n+      {text}\r\n     </button>\r\n   )\r\n }\r\n \r\n"
+                }
+            ],
+            "date": 1665648524066,
+            "name": "Commit-0",
+            "content": "import React from 'react'\r\n\r\nconst Button = ({ bgColorm, color, size, text, borderRadius }) => {\r\n  return <div>Button</div>\r\n}\r\n\r\nexport default Button\r\n"
+        }
+    ]
+}

@@ -1,0 +1,22 @@
+{
+    "sourceFile": "src/index.js",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 1,
+            "patches": [
+                {
+                    "date": 1665629240915,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1665629294271,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -6,7 +6,8 @@\n import { ContextPorvider } from './contexts/ContexProvider'\r\n \r\n ReactDOM.render(\r\n   <ContextPorvider>\r\n-    <App />, document.getElementById('root')\r\n+    <App />\r\n   </ContextPorvider>,\r\n+  document.getElementById('root'),\r\n )\r\n"
+                }
+            ],
+            "date": 1665629240915,
+            "name": "Commit-0",
+            "content": "import React from 'react'\r\nimport ReactDOM from 'react-dom'\r\n\r\nimport './index.css'\r\nimport App from './App'\r\nimport { ContextPorvider } from './contexts/ContexProvider'\r\n\r\nReactDOM.render(\r\n  <ContextPorvider>\r\n    <App />, document.getElementById('root')\r\n  </ContextPorvider>,\r\n)\r\n"
+        }
+    ]
+}

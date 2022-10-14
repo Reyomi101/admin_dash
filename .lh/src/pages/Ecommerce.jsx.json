@@ -1,0 +1,194 @@
+{
+    "sourceFile": "src/pages/Ecommerce.jsx",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 44,
+            "patches": [
+                {
+                    "date": 1665644682737,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1665645240225,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -6,8 +6,8 @@\n import { earningData, SparklineAreaData, ecomPieChartData } from '../data/dummy'\r\n import { useStateContext } from '../contexts/ContexProvider'\r\n \r\n const Ecommerce = () => {\r\n-  return <div>Ecpommerce</div>\r\n+  return <div></div>\r\n }\r\n \r\n export default Ecommerce\r\n"
+                },
+                {
+                    "date": 1665645264462,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -6,8 +6,14 @@\n import { earningData, SparklineAreaData, ecomPieChartData } from '../data/dummy'\r\n import { useStateContext } from '../contexts/ContexProvider'\r\n \r\n const Ecommerce = () => {\r\n-  return <div></div>\r\n+  return (\r\n+    <div>\r\n+      <div>\r\n+        <div></div>\r\n+      </div>\r\n+    </div>\r\n+  )\r\n }\r\n \r\n export default Ecommerce\r\n"
+                },
+                {
+                    "date": 1665645485618,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -7,11 +7,11 @@\n import { useStateContext } from '../contexts/ContexProvider'\r\n \r\n const Ecommerce = () => {\r\n   return (\r\n-    <div>\r\n-      <div>\r\n-        <div></div>\r\n+    <div className=\"m-12\">\r\n+      <div className=\"flex flex-wrap lg:flex-nowrap justify-center\">\r\n+        <div className=\"bg-white dark:text-gray-200 dark:bg-secondary-dark-bg h-44 rounded-xl w-full lg:w-80 p-8 pt-9 m-3 bg-hero-pattern bg-no-repeat bg-cover bg-center\"></div>\r\n       </div>\r\n     </div>\r\n   )\r\n }\r\n"
+                },
+                {
+                    "date": 1665645492546,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -9,9 +9,12 @@\n const Ecommerce = () => {\r\n   return (\r\n     <div className=\"m-12\">\r\n       <div className=\"flex flex-wrap lg:flex-nowrap justify-center\">\r\n-        <div className=\"bg-white dark:text-gray-200 dark:bg-secondary-dark-bg h-44 rounded-xl w-full lg:w-80 p-8 pt-9 m-3 bg-hero-pattern bg-no-repeat bg-cover bg-center\"></div>\r\n+        <div\r\n+          className=\"bg-white dark:text-gray-200 dark:bg-secondary-dark-bg h-44 rounded-xl w-full lg:w-80 p-8 pt-9 m-3 bg-hero-pattern \r\n+        bg-no-repeat bg-cover bg-center\"\r\n+        ></div>\r\n       </div>\r\n     </div>\r\n   )\r\n }\r\n"
+                },
+                {
+                    "date": 1665645901014,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -7,9 +7,9 @@\n import { useStateContext } from '../contexts/ContexProvider'\r\n \r\n const Ecommerce = () => {\r\n   return (\r\n-    <div className=\"m-12\">\r\n+    <div className=\"mt-12\">\r\n       <div className=\"flex flex-wrap lg:flex-nowrap justify-center\">\r\n         <div\r\n           className=\"bg-white dark:text-gray-200 dark:bg-secondary-dark-bg h-44 rounded-xl w-full lg:w-80 p-8 pt-9 m-3 bg-hero-pattern \r\n         bg-no-repeat bg-cover bg-center\"\r\n"
+                },
+                {
+                    "date": 1665646296480,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -7,14 +7,16 @@\n import { useStateContext } from '../contexts/ContexProvider'\r\n \r\n const Ecommerce = () => {\r\n   return (\r\n-    <div className=\"mt-12\">\r\n+    <div className=\"mt-24\">\r\n       <div className=\"flex flex-wrap lg:flex-nowrap justify-center\">\r\n         <div\r\n           className=\"bg-white dark:text-gray-200 dark:bg-secondary-dark-bg h-44 rounded-xl w-full lg:w-80 p-8 pt-9 m-3 bg-hero-pattern \r\n         bg-no-repeat bg-cover bg-center\"\r\n-        ></div>\r\n+        >\r\n+          <div className=\"flex justify-between items-center\"></div>\r\n+        </div>\r\n       </div>\r\n     </div>\r\n   )\r\n }\r\n"
+                },
+                {
+                    "date": 1665646334777,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -13,9 +13,14 @@\n         <div\r\n           className=\"bg-white dark:text-gray-200 dark:bg-secondary-dark-bg h-44 rounded-xl w-full lg:w-80 p-8 pt-9 m-3 bg-hero-pattern \r\n         bg-no-repeat bg-cover bg-center\"\r\n         >\r\n-          <div className=\"flex justify-between items-center\"></div>\r\n+          <div className=\"flex justify-between items-center\">\r\n+            <div>\r\n+              <p>Earnings</p>\r\n+              <p></p>\r\n+            </div>\r\n+          </div>\r\n         </div>\r\n       </div>\r\n     </div>\r\n   )\r\n"
+                },
+                {
+                    "date": 1665646423065,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -16,9 +16,9 @@\n         >\r\n           <div className=\"flex justify-between items-center\">\r\n             <div>\r\n               <p>Earnings</p>\r\n-              <p></p>\r\n+              <p>$63,448.78</p>\r\n             </div>\r\n           </div>\r\n         </div>\r\n       </div>\r\n"
+                },
+                {
+                    "date": 1665646472700,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -15,10 +15,10 @@\n         bg-no-repeat bg-cover bg-center\"\r\n         >\r\n           <div className=\"flex justify-between items-center\">\r\n             <div>\r\n-              <p>Earnings</p>\r\n-              <p>$63,448.78</p>\r\n+              <p className=\"font-bold text-gray-400\">Earnings</p>\r\n+              <p className=\"text-2x1\">$63,448.78</p>\r\n             </div>\r\n           </div>\r\n         </div>\r\n       </div>\r\n"
+                },
+                {
+                    "date": 1665647953999,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,8 +3,9 @@\n import { GoPrimitiveDot } from 'react-icons/go'\r\n \r\n import { Stacked, Pie, Button, SparkLine } from '../components'\r\n import { earningData, SparklineAreaData, ecomPieChartData } from '../data/dummy'\r\n+import welcomeBg from '../data/welcomeBg.svg'\r\n import { useStateContext } from '../contexts/ContexProvider'\r\n \r\n const Ecommerce = () => {\r\n   return (\r\n@@ -12,8 +13,9 @@\n       <div className=\"flex flex-wrap lg:flex-nowrap justify-center\">\r\n         <div\r\n           className=\"bg-white dark:text-gray-200 dark:bg-secondary-dark-bg h-44 rounded-xl w-full lg:w-80 p-8 pt-9 m-3 bg-hero-pattern \r\n         bg-no-repeat bg-cover bg-center\"\r\n+          style={{ backgroundImage: `url(${welcomeBg})` }}\r\n         >\r\n           <div className=\"flex justify-between items-center\">\r\n             <div>\r\n               <p className=\"font-bold text-gray-400\">Earnings</p>\r\n"
+                },
+                {
+                    "date": 1665648319554,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -21,8 +21,16 @@\n               <p className=\"font-bold text-gray-400\">Earnings</p>\r\n               <p className=\"text-2x1\">$63,448.78</p>\r\n             </div>\r\n           </div>\r\n+          <div className=\"mt-6\">\r\n+            <Button\r\n+              color=\"white\"\r\n+              bgColor=\"blue\"\r\n+              text=\"Download\"\r\n+              borderRadius=\"10px\"\r\n+            />\r\n+          </div>\r\n         </div>\r\n       </div>\r\n     </div>\r\n   )\r\n"
+                },
+                {
+                    "date": 1665648743541,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -27,8 +27,9 @@\n               color=\"white\"\r\n               bgColor=\"blue\"\r\n               text=\"Download\"\r\n               borderRadius=\"10px\"\r\n+              size=\"md\"\r\n             />\r\n           </div>\r\n         </div>\r\n       </div>\r\n"
+                },
+                {
+                    "date": 1665649231962,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -31,8 +31,16 @@\n               size=\"md\"\r\n             />\r\n           </div>\r\n         </div>\r\n+        <div className=\"flex m-3 flex-wrap justify-center gap-1 items-center\">\r\n+          {earningData.map((item) => (\r\n+            <div\r\n+              key={item.title}\r\n+              className=\"bg-white dark:text-gray-200 dark:bg-secondary-dark-bg md:w-56 p-4 pt-9 rounded-2x1\"\r\n+            ></div>\r\n+          ))}\r\n+        </div>\r\n       </div>\r\n     </div>\r\n   )\r\n }\r\n"
+                },
+                {
+                    "date": 1665649466194,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -36,9 +36,16 @@\n           {earningData.map((item) => (\r\n             <div\r\n               key={item.title}\r\n               className=\"bg-white dark:text-gray-200 dark:bg-secondary-dark-bg md:w-56 p-4 pt-9 rounded-2x1\"\r\n-            ></div>\r\n+            >\r\n+              <buttom\r\n+                type=\"button\"\r\n+                style={{ color: item.iconColor, backgroundColor: item.iconBg }}\r\n+              >\r\n+                {item.icon}\r\n+              </buttom>\r\n+            </div>\r\n           ))}\r\n         </div>\r\n       </div>\r\n     </div>\r\n"
+                },
+                {
+                    "date": 1665649507581,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -40,8 +40,9 @@\n             >\r\n               <buttom\r\n                 type=\"button\"\r\n                 style={{ color: item.iconColor, backgroundColor: item.iconBg }}\r\n+                className=\"text-2x1\"\r\n               >\r\n                 {item.icon}\r\n               </buttom>\r\n             </div>\r\n"
+                },
+                {
+                    "date": 1665649635770,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -40,9 +40,9 @@\n             >\r\n               <buttom\r\n                 type=\"button\"\r\n                 style={{ color: item.iconColor, backgroundColor: item.iconBg }}\r\n-                className=\"text-2x1\"\r\n+                className=\"text-2x1 opacity-0.9 rounded-full p-4 hover:drop-shadow-lg\"\r\n               >\r\n                 {item.icon}\r\n               </buttom>\r\n             </div>\r\n"
+                },
+                {
+                    "date": 1665649698916,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -44,8 +44,9 @@\n                 className=\"text-2x1 opacity-0.9 rounded-full p-4 hover:drop-shadow-lg\"\r\n               >\r\n                 {item.icon}\r\n               </buttom>\r\n+              <p className=\"mt-3\"></p>\r\n             </div>\r\n           ))}\r\n         </div>\r\n       </div>\r\n"
+                },
+                {
+                    "date": 1665649779244,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -44,9 +44,11 @@\n                 className=\"text-2x1 opacity-0.9 rounded-full p-4 hover:drop-shadow-lg\"\r\n               >\r\n                 {item.icon}\r\n               </buttom>\r\n-              <p className=\"mt-3\"></p>\r\n+              <p className=\"mt-3\">\r\n+                <span className=\"text-lg font-semibold\">{item.amount}</span>\r\n+              </p>\r\n             </div>\r\n           ))}\r\n         </div>\r\n       </div>\r\n"
+                },
+                {
+                    "date": 1665650132035,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -46,8 +46,9 @@\n                 {item.icon}\r\n               </buttom>\r\n               <p className=\"mt-3\">\r\n                 <span className=\"text-lg font-semibold\">{item.amount}</span>\r\n+                <span>{item.percentage}</span>\r\n               </p>\r\n             </div>\r\n           ))}\r\n         </div>\r\n"
+                },
+                {
+                    "date": 1665650325201,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -46,9 +46,11 @@\n                 {item.icon}\r\n               </buttom>\r\n               <p className=\"mt-3\">\r\n                 <span className=\"text-lg font-semibold\">{item.amount}</span>\r\n-                <span>{item.percentage}</span>\r\n+                <span className={`text-sm text-${item.pcColor} ml-2`}>\r\n+                  {item.percentage}\r\n+                </span>\r\n               </p>\r\n             </div>\r\n           ))}\r\n         </div>\r\n"
+                },
+                {
+                    "date": 1665650618359,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -37,15 +37,15 @@\n             <div\r\n               key={item.title}\r\n               className=\"bg-white dark:text-gray-200 dark:bg-secondary-dark-bg md:w-56 p-4 pt-9 rounded-2x1\"\r\n             >\r\n-              <buttom\r\n+              <button\r\n                 type=\"button\"\r\n                 style={{ color: item.iconColor, backgroundColor: item.iconBg }}\r\n                 className=\"text-2x1 opacity-0.9 rounded-full p-4 hover:drop-shadow-lg\"\r\n               >\r\n                 {item.icon}\r\n-              </buttom>\r\n+              </button>\r\n               <p className=\"mt-3\">\r\n                 <span className=\"text-lg font-semibold\">{item.amount}</span>\r\n                 <span className={`text-sm text-${item.pcColor} ml-2`}>\r\n                   {item.percentage}\r\n"
+                },
+                {
+                    "date": 1665650732472,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -46,9 +46,9 @@\n                 {item.icon}\r\n               </button>\r\n               <p className=\"mt-3\">\r\n                 <span className=\"text-lg font-semibold\">{item.amount}</span>\r\n-                <span className={`text-sm text-${item.pcColor} ml-2`}>\r\n+                <span className={`text-sm text-green-600 ml-2`}>\r\n                   {item.percentage}\r\n                 </span>\r\n               </p>\r\n             </div>\r\n"
+                },
+                {
+                    "date": 1665650745305,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -46,9 +46,9 @@\n                 {item.icon}\r\n               </button>\r\n               <p className=\"mt-3\">\r\n                 <span className=\"text-lg font-semibold\">{item.amount}</span>\r\n-                <span className={`text-sm text-green-600 ml-2`}>\r\n+                <span className={`text-sm text-red-600 ml-2`}>\r\n                   {item.percentage}\r\n                 </span>\r\n               </p>\r\n             </div>\r\n"
+                },
+                {
+                    "date": 1665650766475,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -46,9 +46,9 @@\n                 {item.icon}\r\n               </button>\r\n               <p className=\"mt-3\">\r\n                 <span className=\"text-lg font-semibold\">{item.amount}</span>\r\n-                <span className={`text-sm text-red-600 ml-2`}>\r\n+                <span className={`text-sm text-${item.pcColor} ml-2`}>\r\n                   {item.percentage}\r\n                 </span>\r\n               </p>\r\n             </div>\r\n"
+                },
+                {
+                    "date": 1665650848109,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -50,8 +50,9 @@\n                 <span className={`text-sm text-${item.pcColor} ml-2`}>\r\n                   {item.percentage}\r\n                 </span>\r\n               </p>\r\n+              <p>{item.title}</p>\r\n             </div>\r\n           ))}\r\n         </div>\r\n       </div>\r\n"
+                },
+                {
+                    "date": 1665650904366,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -50,9 +50,9 @@\n                 <span className={`text-sm text-${item.pcColor} ml-2`}>\r\n                   {item.percentage}\r\n                 </span>\r\n               </p>\r\n-              <p>{item.title}</p>\r\n+              <p className=\"text-sm text-gray-400 mt-1\">{item.title}</p>\r\n             </div>\r\n           ))}\r\n         </div>\r\n       </div>\r\n"
+                },
+                {
+                    "date": 1665651826552,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -55,8 +55,16 @@\n             </div>\r\n           ))}\r\n         </div>\r\n       </div>\r\n+\r\n+      <div className=\"flex gap-10 flex-wrap justify-center\">\r\n+        <div className=\"bg-white dark:text-gray-200 dark:bg-secondary-dark-bg m-3 rounded-2xl md:w-780\">\r\n+          <div className=\"flex justify-between\">\r\n+            <p className=\"font-semibold text-xl\">Revenue Updates</p>\r\n+          </div>\r\n+        </div>\r\n+      </div>\r\n     </div>\r\n   )\r\n }\r\n \r\n"
+                },
+                {
+                    "date": 1665652373100,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -60,8 +60,15 @@\n       <div className=\"flex gap-10 flex-wrap justify-center\">\r\n         <div className=\"bg-white dark:text-gray-200 dark:bg-secondary-dark-bg m-3 rounded-2xl md:w-780\">\r\n           <div className=\"flex justify-between\">\r\n             <p className=\"font-semibold text-xl\">Revenue Updates</p>\r\n+            <div className=\"flex items-center gap-4\">\r\n+              <p>\r\n+                <span>\r\n+                  <GoPrimitiveDot />\r\n+                </span>\r\n+              </p>\r\n+            </div>\r\n           </div>\r\n         </div>\r\n       </div>\r\n     </div>\r\n"
+                },
+                {
+                    "date": 1665652674278,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -61,12 +61,13 @@\n         <div className=\"bg-white dark:text-gray-200 dark:bg-secondary-dark-bg m-3 rounded-2xl md:w-780\">\r\n           <div className=\"flex justify-between\">\r\n             <p className=\"font-semibold text-xl\">Revenue Updates</p>\r\n             <div className=\"flex items-center gap-4\">\r\n-              <p>\r\n+              <p className=\"flex items-center gap-2 text-gray-600 hover:drop-shadow-xl\">\r\n                 <span>\r\n                   <GoPrimitiveDot />\r\n                 </span>\r\n+                <span>Expense</span>\r\n               </p>\r\n             </div>\r\n           </div>\r\n         </div>\r\n"
+                },
+                {
+                    "date": 1665653004204,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -67,8 +67,14 @@\n                   <GoPrimitiveDot />\r\n                 </span>\r\n                 <span>Expense</span>\r\n               </p>\r\n+              <p className=\"flex items-center gap-2 text-green-600 hover:drop-shadow-xl\">\r\n+                <span>\r\n+                  <GoPrimitiveDot />\r\n+                </span>\r\n+                <span>Expense</span>\r\n+              </p>\r\n             </div>\r\n           </div>\r\n         </div>\r\n       </div>\r\n"
+                },
+                {
+                    "date": 1665653047611,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -71,9 +71,9 @@\n               <p className=\"flex items-center gap-2 text-green-600 hover:drop-shadow-xl\">\r\n                 <span>\r\n                   <GoPrimitiveDot />\r\n                 </span>\r\n-                <span>Expense</span>\r\n+                <span>Budget</span>\r\n               </p>\r\n             </div>\r\n           </div>\r\n         </div>\r\n"
+                },
+                {
+                    "date": 1665653684091,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -75,8 +75,18 @@\n                 <span>Budget</span>\r\n               </p>\r\n             </div>\r\n           </div>\r\n+          <div className=\"mt-10 flex gap-10 flex-wrap justify-center\">\r\n+            <div className=\"border-r-1 border-color m-4 pr-10\">\r\n+              <div>\r\n+                <p>\r\n+                  <span>$93,438</span>\r\n+                  <span>23%</span>\r\n+                </p>\r\n+              </div>\r\n+            </div>\r\n+          </div>\r\n         </div>\r\n       </div>\r\n     </div>\r\n   )\r\n"
+                },
+                {
+                    "date": 1665653801702,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -79,9 +79,9 @@\n           <div className=\"mt-10 flex gap-10 flex-wrap justify-center\">\r\n             <div className=\"border-r-1 border-color m-4 pr-10\">\r\n               <div>\r\n                 <p>\r\n-                  <span>$93,438</span>\r\n+                  <span className=\"text-3x1 font-semibold\">$93,438</span>\r\n                   <span>23%</span>\r\n                 </p>\r\n               </div>\r\n             </div>\r\n"
+                },
+                {
+                    "date": 1665653842742,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -80,9 +80,9 @@\n             <div className=\"border-r-1 border-color m-4 pr-10\">\r\n               <div>\r\n                 <p>\r\n                   <span className=\"text-3x1 font-semibold\">$93,438</span>\r\n-                  <span>23%</span>\r\n+                  <span className=\"p-1\">23%</span>\r\n                 </p>\r\n               </div>\r\n             </div>\r\n           </div>\r\n"
+                },
+                {
+                    "date": 1665654083615,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -80,9 +80,11 @@\n             <div className=\"border-r-1 border-color m-4 pr-10\">\r\n               <div>\r\n                 <p>\r\n                   <span className=\"text-3x1 font-semibold\">$93,438</span>\r\n-                  <span className=\"p-1\">23%</span>\r\n+                  <span className=\"p-1.5 hover:drop-shadow-xl cursor-pointer rounded-full text-white bg-green-400 ml-3 text-xs\">\r\n+                    23%\r\n+                  </span>\r\n                 </p>\r\n               </div>\r\n             </div>\r\n           </div>\r\n"
+                },
+                {
+                    "date": 1665654357498,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -84,8 +84,9 @@\n                   <span className=\"p-1.5 hover:drop-shadow-xl cursor-pointer rounded-full text-white bg-green-400 ml-3 text-xs\">\r\n                     23%\r\n                   </span>\r\n                 </p>\r\n+                <p className=\"text-gray-500 mt-1\"></p>\r\n               </div>\r\n             </div>\r\n           </div>\r\n         </div>\r\n"
+                },
+                {
+                    "date": 1665654367779,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -84,9 +84,9 @@\n                   <span className=\"p-1.5 hover:drop-shadow-xl cursor-pointer rounded-full text-white bg-green-400 ml-3 text-xs\">\r\n                     23%\r\n                   </span>\r\n                 </p>\r\n-                <p className=\"text-gray-500 mt-1\"></p>\r\n+                <p className=\"text-gray-500 mt-1\">Budget</p>\r\n               </div>\r\n             </div>\r\n           </div>\r\n         </div>\r\n"
+                },
+                {
+                    "date": 1665714041468,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -86,8 +86,17 @@\n                   </span>\r\n                 </p>\r\n                 <p className=\"text-gray-500 mt-1\">Budget</p>\r\n               </div>\r\n+              <div>\r\n+                <p>\r\n+                  <span className=\"text-3x1 font-semibold\">$48,438</span>\r\n+                \r\n+                    23%\r\n+                  </span>\r\n+                </p>\r\n+                <p className=\"text-gray-500 mt-1\">Expenses</p>\r\n+              </div>\r\n             </div>\r\n           </div>\r\n         </div>\r\n       </div>\r\n"
+                },
+                {
+                    "date": 1665714051660,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -89,11 +89,8 @@\n               </div>\r\n               <div>\r\n                 <p>\r\n                   <span className=\"text-3x1 font-semibold\">$48,438</span>\r\n-                \r\n-                    23%\r\n-                  </span>\r\n                 </p>\r\n                 <p className=\"text-gray-500 mt-1\">Expenses</p>\r\n               </div>\r\n             </div>\r\n"
+                },
+                {
+                    "date": 1665714116262,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -86,9 +86,9 @@\n                   </span>\r\n                 </p>\r\n                 <p className=\"text-gray-500 mt-1\">Budget</p>\r\n               </div>\r\n-              <div>\r\n+              <div className=\"mt-8\">\r\n                 <p>\r\n                   <span className=\"text-3x1 font-semibold\">$48,438</span>\r\n                 </p>\r\n                 <p className=\"text-gray-500 mt-1\">Expenses</p>\r\n"
+                },
+                {
+                    "date": 1665714407628,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -79,9 +79,9 @@\n           <div className=\"mt-10 flex gap-10 flex-wrap justify-center\">\r\n             <div className=\"border-r-1 border-color m-4 pr-10\">\r\n               <div>\r\n                 <p>\r\n-                  <span className=\"text-3x1 font-semibold\">$93,438</span>\r\n+                  <span className=\"text-3 font-semibold\">$93,438</span>\r\n                   <span className=\"p-1.5 hover:drop-shadow-xl cursor-pointer rounded-full text-white bg-green-400 ml-3 text-xs\">\r\n                     23%\r\n                   </span>\r\n                 </p>\r\n"
+                },
+                {
+                    "date": 1665714588181,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -79,9 +79,9 @@\n           <div className=\"mt-10 flex gap-10 flex-wrap justify-center\">\r\n             <div className=\"border-r-1 border-color m-4 pr-10\">\r\n               <div>\r\n                 <p>\r\n-                  <span className=\"text-3 font-semibold\">$93,438</span>\r\n+                  <span className=\"text-3xl font-semibold\">$93,438</span>\r\n                   <span className=\"p-1.5 hover:drop-shadow-xl cursor-pointer rounded-full text-white bg-green-400 ml-3 text-xs\">\r\n                     23%\r\n                   </span>\r\n                 </p>\r\n"
+                },
+                {
+                    "date": 1665714612738,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -88,9 +88,9 @@\n                 <p className=\"text-gray-500 mt-1\">Budget</p>\r\n               </div>\r\n               <div className=\"mt-8\">\r\n                 <p>\r\n-                  <span className=\"text-3x1 font-semibold\">$48,438</span>\r\n+                  <span className=\"text-3xl font-semibold\">$48,438</span>\r\n                 </p>\r\n                 <p className=\"text-gray-500 mt-1\">Expenses</p>\r\n               </div>\r\n             </div>\r\n"
+                },
+                {
+                    "date": 1665714798644,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -92,8 +92,12 @@\n                   <span className=\"text-3xl font-semibold\">$48,438</span>\r\n                 </p>\r\n                 <p className=\"text-gray-500 mt-1\">Expenses</p>\r\n               </div>\r\n+\r\n+              <div className=\"mt-5\">\r\n+                <SparkLine />\r\n+              </div>\r\n             </div>\r\n           </div>\r\n         </div>\r\n       </div>\r\n"
+                }
+            ],
+            "date": 1665644682737,
+            "name": "Commit-0",
+            "content": "import React from 'react'\r\nimport { BsCurrencyDollar } from 'react-icons/bs'\r\nimport { GoPrimitiveDot } from 'react-icons/go'\r\n\r\nimport { Stacked, Pie, Button, SparkLine } from '../components'\r\nimport { earningData, SparklineAreaData, ecomPieChartData } from '../data/dummy'\r\nimport { useStateContext } from '../contexts/ContexProvider'\r\n\r\nconst Ecommerce = () => {\r\n  return <div>Ecpommerce</div>\r\n}\r\n\r\nexport default Ecommerce\r\n"
+        }
+    ]
+}
