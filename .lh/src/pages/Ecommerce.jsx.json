@@ -3,7 +3,7 @@
     "activeCommit": 0,
     "commits": [
         {
-            "activePatchIndex": 44,
+            "activePatchIndex": 54,
             "patches": [
                 {
                     "date": 1665644682737,
@@ -184,6 +184,46 @@
                 {
                     "date": 1665714798644,
                     "content": "Index: \n===================================================================\n--- \n+++ \n@@ -92,8 +92,12 @@\n                   <span className=\"text-3xl font-semibold\">$48,438</span>\r\n                 </p>\r\n                 <p className=\"text-gray-500 mt-1\">Expenses</p>\r\n               </div>\r\n+\r\n+              <div className=\"mt-5\">\r\n+                <SparkLine />\r\n+              </div>\r\n             </div>\r\n           </div>\r\n         </div>\r\n       </div>\r\n"
+                },
+                {
+                    "date": 1665717105301,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -94,9 +94,17 @@\n                 <p className=\"text-gray-500 mt-1\">Expenses</p>\r\n               </div>\r\n \r\n               <div className=\"mt-5\">\r\n-                <SparkLine />\r\n+                <SparkLine\r\n+                  currentColor=\"blue\"\r\n+                  id=\"line-sparkline\"\r\n+                  type=\"Line\"\r\n+                  height=\"80\"\r\n+                  width=\"250px\"\r\n+                  data={SparklineAreaData}\r\n+                  color=\"blue\"\r\n+                />\r\n               </div>\r\n             </div>\r\n           </div>\r\n         </div>\r\n"
+                },
+                {
+                    "date": 1665720355690,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,12 +1,12 @@\n import React from 'react'\r\n-import { BsCurrencyDollar } from 'react-icons/bs'\r\n+// import { BsCurrencyDollar } from 'react-icons/bs'\r\n import { GoPrimitiveDot } from 'react-icons/go'\r\n \r\n import { Stacked, Pie, Button, SparkLine } from '../components'\r\n import { earningData, SparklineAreaData, ecomPieChartData } from '../data/dummy'\r\n import welcomeBg from '../data/welcomeBg.svg'\r\n-import { useStateContext } from '../contexts/ContexProvider'\r\n+// import { useStateContext } from '../contexts/ContexProvider'\r\n \r\n const Ecommerce = () => {\r\n   return (\r\n     <div className=\"mt-24\">\r\n"
+                },
+                {
+                    "date": 1665720486706,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -23,9 +23,9 @@\n             </div>\r\n           </div>\r\n           <div className=\"mt-6\">\r\n             <Button\r\n-              color=\"white\"\r\n+              color=\"blue\"\r\n               bgColor=\"blue\"\r\n               text=\"Download\"\r\n               borderRadius=\"10px\"\r\n               size=\"md\"\r\n"
+                },
+                {
+                    "date": 1665723826158,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -23,9 +23,9 @@\n             </div>\r\n           </div>\r\n           <div className=\"mt-6\">\r\n             <Button\r\n-              color=\"blue\"\r\n+              color=\"white\"\r\n               bgColor=\"blue\"\r\n               text=\"Download\"\r\n               borderRadius=\"10px\"\r\n               size=\"md\"\r\n"
+                },
+                {
+                    "date": 1665725750150,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -104,8 +104,17 @@\n                   data={SparklineAreaData}\r\n                   color=\"blue\"\r\n                 />\r\n               </div>\r\n+\r\n+              <div className=\"mt-10\">\r\n+                <Button\r\n+                  color=\"white\"\r\n+                  bgColor=\"blue\"\r\n+                  text=\"Download Report\"\r\n+                  borderRadius=\"10px\"\r\n+                />\r\n+              </div>\r\n             </div>\r\n           </div>\r\n         </div>\r\n       </div>\r\n"
+                },
+                {
+                    "date": 1665725847951,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -114,8 +114,13 @@\n                   borderRadius=\"10px\"\r\n                 />\r\n               </div>\r\n             </div>\r\n+            <div>\r\n+              <div>\r\n+                <Stacked />>\r\n+              </div>\r\n+            </div>\r\n           </div>\r\n         </div>\r\n       </div>\r\n     </div>\r\n"
+                },
+                {
+                    "date": 1665725855445,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -116,9 +116,9 @@\n               </div>\r\n             </div>\r\n             <div>\r\n               <div>\r\n-                <Stacked />>\r\n+                <Stacked />\r\n               </div>\r\n             </div>\r\n           </div>\r\n         </div>\r\n"
+                },
+                {
+                    "date": 1665725906896,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -116,9 +116,9 @@\n               </div>\r\n             </div>\r\n             <div>\r\n               <div>\r\n-                <Stacked />\r\n+                <Stacked width=\"320px\" height=\"360px\" />\r\n               </div>\r\n             </div>\r\n           </div>\r\n         </div>\r\n"
+                },
+                {
+                    "date": 1665727763534,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,9 +4,9 @@\n \r\n import { Stacked, Pie, Button, SparkLine } from '../components'\r\n import { earningData, SparklineAreaData, ecomPieChartData } from '../data/dummy'\r\n import welcomeBg from '../data/welcomeBg.svg'\r\n-// import { useStateContext } from '../contexts/ContexProvider'\r\n+import { useStateContext } from '../contexts/ContexProvider'\r\n \r\n const Ecommerce = () => {\r\n   return (\r\n     <div className=\"mt-24\">\r\n"
+                },
+                {
+                    "date": 1665727773203,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,6 +1,6 @@\n import React from 'react'\r\n-// import { BsCurrencyDollar } from 'react-icons/bs'\r\n+import { BsCurrencyDollar } from 'react-icons/bs'\r\n import { GoPrimitiveDot } from 'react-icons/go'\r\n \r\n import { Stacked, Pie, Button, SparkLine } from '../components'\r\n import { earningData, SparklineAreaData, ecomPieChartData } from '../data/dummy'\r\n"
                 }
             ],
             "date": 1665644682737,

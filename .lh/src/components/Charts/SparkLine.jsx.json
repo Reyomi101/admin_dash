@@ -1,0 +1,78 @@
+{
+    "sourceFile": "src/components/Charts/SparkLine.jsx",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 15,
+            "patches": [
+                {
+                    "date": 1665717376184,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1665718960886,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -5,8 +5,12 @@\n   SparklineTooltip,\r\n } from '@syncfusion/ej2-react-charts'\r\n \r\n const SparkLine = ({ id, height, width, color, data, type, currentColor }) => {\r\n-  return <SparklineComponent>SparkLine</SparklineComponent>\r\n+  return (\r\n+    <SparklineComponent>\r\n+      <Inject services={{ SparklineTooltip }} />\r\n+    </SparklineComponent>\r\n+  )\r\n }\r\n \r\n export default SparkLine\r\n"
+                },
+                {
+                    "date": 1665719136344,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -6,9 +6,17 @@\n } from '@syncfusion/ej2-react-charts'\r\n \r\n const SparkLine = ({ id, height, width, color, data, type, currentColor }) => {\r\n   return (\r\n-    <SparklineComponent>\r\n+    <SparklineComponent\r\n+      id={id}\r\n+      height={height}\r\n+      width={width}\r\n+      lineWidth={1}\r\n+      valueType=\"Numeric\"\r\n+      fill={color}\r\n+      border={{ color: currentColor, width: 2 }}\r\n+    >\r\n       <Inject services={{ SparklineTooltip }} />\r\n     </SparklineComponent>\r\n   )\r\n }\r\n"
+                },
+                {
+                    "date": 1665719167774,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -15,9 +15,9 @@\n       valueType=\"Numeric\"\r\n       fill={color}\r\n       border={{ color: currentColor, width: 2 }}\r\n     >\r\n-      <Inject services={{ SparklineTooltip }} />\r\n+      <Inject services={[SparklineTooltip]} />\r\n     </SparklineComponent>\r\n   )\r\n }\r\n \r\n"
+                },
+                {
+                    "date": 1665719217199,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -14,8 +14,12 @@\n       lineWidth={1}\r\n       valueType=\"Numeric\"\r\n       fill={color}\r\n       border={{ color: currentColor, width: 2 }}\r\n+      dataSource={data}\r\n+      xName=\"x\"\r\n+      yName=\"y\"\r\n+      type={type}\r\n     >\r\n       <Inject services={[SparklineTooltip]} />\r\n     </SparklineComponent>\r\n   )\r\n"
+                },
+                {
+                    "date": 1665719845232,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -6,9 +6,9 @@\n } from '@syncfusion/ej2-react-charts'\r\n \r\n const SparkLine = ({ id, height, width, color, data, type, currentColor }) => {\r\n   return (\r\n-    <SparklineComponent\r\n+    <SparkineComponent\r\n       id={id}\r\n       height={height}\r\n       width={width}\r\n       lineWidth={1}\r\n@@ -20,9 +20,9 @@\n       yName=\"y\"\r\n       type={type}\r\n     >\r\n       <Inject services={[SparklineTooltip]} />\r\n-    </SparklineComponent>\r\n+    </SparkineComponent>\r\n   )\r\n }\r\n \r\n export default SparkLine\r\n"
+                },
+                {
+                    "date": 1665719915069,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -6,9 +6,9 @@\n } from '@syncfusion/ej2-react-charts'\r\n \r\n const SparkLine = ({ id, height, width, color, data, type, currentColor }) => {\r\n   return (\r\n-    <SparkineComponent\r\n+    <SparklineComponent\r\n       id={id}\r\n       height={height}\r\n       width={width}\r\n       lineWidth={1}\r\n@@ -20,9 +20,9 @@\n       yName=\"y\"\r\n       type={type}\r\n     >\r\n       <Inject services={[SparklineTooltip]} />\r\n-    </SparkineComponent>\r\n+    </SparklineComponent>\r\n   )\r\n }\r\n \r\n export default SparkLine\r\n"
+                },
+                {
+                    "date": 1665720247820,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -19,9 +19,9 @@\n       xName=\"x\"\r\n       yName=\"y\"\r\n       type={type}\r\n     >\r\n-      <Inject services={[SparklineTooltip]} />\r\n+      <Inject services={{ SparklineTooltip }} />\r\n     </SparklineComponent>\r\n   )\r\n }\r\n \r\n"
+                },
+                {
+                    "date": 1665720284999,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -19,9 +19,9 @@\n       xName=\"x\"\r\n       yName=\"y\"\r\n       type={type}\r\n     >\r\n-      <Inject services={{ SparklineTooltip }} />\r\n+      <Inject services={[SparklineTooltip]} />\r\n     </SparklineComponent>\r\n   )\r\n }\r\n \r\n"
+                },
+                {
+                    "date": 1665720303774,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -10,9 +10,9 @@\n     <SparklineComponent\r\n       id={id}\r\n       height={height}\r\n       width={width}\r\n-      lineWidth={1}\r\n+      lineWidth={50}\r\n       valueType=\"Numeric\"\r\n       fill={color}\r\n       border={{ color: currentColor, width: 2 }}\r\n       dataSource={data}\r\n"
+                },
+                {
+                    "date": 1665723757669,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,10 +1,7 @@\n import React from 'react'\r\n-import {\r\n-  SparklineComponent,\r\n-  Inject,\r\n-  SparklineTooltip,\r\n-} from '@syncfusion/ej2-react-charts'\r\n+import { Inject, SparklineTooltip } from '@syncfusion/ej2-react-charts'\r\n+import { SparklineComponent } from '@syncfusion/ej2-react-charts'\r\n \r\n const SparkLine = ({ id, height, width, color, data, type, currentColor }) => {\r\n   return (\r\n     <SparklineComponent\r\n"
+                },
+                {
+                    "date": 1665723806752,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -12,10 +12,10 @@\n       valueType=\"Numeric\"\r\n       fill={color}\r\n       border={{ color: currentColor, width: 2 }}\r\n       dataSource={data}\r\n-      xName=\"x\"\r\n-      yName=\"y\"\r\n+      xName=\"xval\"\r\n+      yName=\"yval\"\r\n       type={type}\r\n     >\r\n       <Inject services={[SparklineTooltip]} />\r\n     </SparklineComponent>\r\n"
+                },
+                {
+                    "date": 1665723841603,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -7,9 +7,9 @@\n     <SparklineComponent\r\n       id={id}\r\n       height={height}\r\n       width={width}\r\n-      lineWidth={50}\r\n+      lineWidth={1}\r\n       valueType=\"Numeric\"\r\n       fill={color}\r\n       border={{ color: currentColor, width: 2 }}\r\n       dataSource={data}\r\n"
+                },
+                {
+                    "date": 1665723868053,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -12,9 +12,9 @@\n       valueType=\"Numeric\"\r\n       fill={color}\r\n       border={{ color: currentColor, width: 2 }}\r\n       dataSource={data}\r\n-      xName=\"xval\"\r\n+      xName=\"x\"\r\n       yName=\"yval\"\r\n       type={type}\r\n     >\r\n       <Inject services={[SparklineTooltip]} />\r\n"
+                },
+                {
+                    "date": 1665724494449,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -15,8 +15,15 @@\n       dataSource={data}\r\n       xName=\"x\"\r\n       yName=\"yval\"\r\n       type={type}\r\n+      tooltipSettings={{\r\n+        visible: true,\r\n+        format: `${x} : data ${yval}`,\r\n+        trackLineSettings: {\r\n+          visible: true,\r\n+        },\r\n+      }}\r\n     >\r\n       <Inject services={[SparklineTooltip]} />\r\n     </SparklineComponent>\r\n   )\r\n"
+                },
+                {
+                    "date": 1665724529985,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -17,9 +17,9 @@\n       yName=\"yval\"\r\n       type={type}\r\n       tooltipSettings={{\r\n         visible: true,\r\n-        format: `${x} : data ${yval}`,\r\n+        format: '${x} : data ${yval}',\r\n         trackLineSettings: {\r\n           visible: true,\r\n         },\r\n       }}\r\n"
+                }
+            ],
+            "date": 1665717376184,
+            "name": "Commit-0",
+            "content": "import React from 'react'\r\nimport {\r\n  SparklineComponent,\r\n  Inject,\r\n  SparklineTooltip,\r\n} from '@syncfusion/ej2-react-charts'\r\n\r\nconst SparkLine = ({ id, height, width, color, data, type, currentColor }) => {\r\n  return <SparklineComponent>SparkLine</SparklineComponent>\r\n}\r\n\r\nexport default SparkLine\r\n"
+        }
+    ]
+}

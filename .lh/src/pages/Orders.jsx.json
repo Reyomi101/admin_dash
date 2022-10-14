@@ -1,0 +1,86 @@
+{
+    "sourceFile": "src/pages/Orders.jsx",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 17,
+            "patches": [
+                {
+                    "date": 1665729086907,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1665729150245,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -17,9 +17,9 @@\n \r\n const Orders = () => {\r\n   return (\r\n     <div>\r\n-      <Header title=\"Orders\" />\r\n+      <Header title=\"Orders\" category=\"Page/>\r\n     </div>\r\n   )\r\n }\r\n \r\n"
+                },
+                {
+                    "date": 1665729890371,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -16,10 +16,10 @@\n import { Header } from '../components'\r\n \r\n const Orders = () => {\r\n   return (\r\n-    <div>\r\n-      <Header title=\"Orders\" category=\"Page/>\r\n+    <div className=\"m-2 md:m-10 p-2 md:p-10 bg-white rounded-3xl\">\r\n+      <Header title=\"Orders\" category=\"Page\" />\r\n     </div>\r\n   )\r\n }\r\n \r\n"
+                },
+                {
+                    "date": 1665730238192,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -18,8 +18,15 @@\n const Orders = () => {\r\n   return (\r\n     <div className=\"m-2 md:m-10 p-2 md:p-10 bg-white rounded-3xl\">\r\n       <Header title=\"Orders\" category=\"Page\" />\r\n+      <GridComponent>\r\n+        <ColumnDirective>\r\n+          {ordersGrid.map((item, index) => (\r\n+            <ColumnDirective key={index} {...item} />\r\n+          ))}\r\n+        </ColumnDirective>\r\n+      </GridComponent>\r\n     </div>\r\n   )\r\n }\r\n \r\n"
+                },
+                {
+                    "date": 1665730306861,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,8 +1,9 @@\n import React from 'react'\r\n import {\r\n   GridComponent,\r\n   ColumnDirective,\r\n+  ColumnsDirective,\r\n   Resize,\r\n   Sort,\r\n   ContextMenu,\r\n   Filter,\r\n"
+                },
+                {
+                    "date": 1665730316207,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -20,13 +20,13 @@\n   return (\r\n     <div className=\"m-2 md:m-10 p-2 md:p-10 bg-white rounded-3xl\">\r\n       <Header title=\"Orders\" category=\"Page\" />\r\n       <GridComponent>\r\n-        <ColumnDirective>\r\n+        <ColumnsDirective>\r\n           {ordersGrid.map((item, index) => (\r\n             <ColumnDirective key={index} {...item} />\r\n           ))}\r\n-        </ColumnDirective>\r\n+        </ColumnsDirective>\r\n       </GridComponent>\r\n     </div>\r\n   )\r\n }\r\n"
+                },
+                {
+                    "date": 1665730664939,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -20,13 +20,13 @@\n   return (\r\n     <div className=\"m-2 md:m-10 p-2 md:p-10 bg-white rounded-3xl\">\r\n       <Header title=\"Orders\" category=\"Page\" />\r\n       <GridComponent>\r\n-        <ColumnsDirective>\r\n+        <ColumnDirective>\r\n           {ordersGrid.map((item, index) => (\r\n             <ColumnDirective key={index} {...item} />\r\n           ))}\r\n-        </ColumnsDirective>\r\n+        </ColumnDirective>\r\n       </GridComponent>\r\n     </div>\r\n   )\r\n }\r\n"
+                },
+                {
+                    "date": 1665730671661,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -20,13 +20,13 @@\n   return (\r\n     <div className=\"m-2 md:m-10 p-2 md:p-10 bg-white rounded-3xl\">\r\n       <Header title=\"Orders\" category=\"Page\" />\r\n       <GridComponent>\r\n-        <ColumnDirective>\r\n+        <ColumnsDirective>\r\n           {ordersGrid.map((item, index) => (\r\n             <ColumnDirective key={index} {...item} />\r\n           ))}\r\n-        </ColumnDirective>\r\n+        </ColumnsDirective>\r\n       </GridComponent>\r\n     </div>\r\n   )\r\n }\r\n"
+                },
+                {
+                    "date": 1665730748218,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -19,9 +19,9 @@\n const Orders = () => {\r\n   return (\r\n     <div className=\"m-2 md:m-10 p-2 md:p-10 bg-white rounded-3xl\">\r\n       <Header title=\"Orders\" category=\"Page\" />\r\n-      <GridComponent>\r\n+      <GridComponent id=\"gridcomp\" dataSource={ordersData}>\r\n         <ColumnsDirective>\r\n           {ordersGrid.map((item, index) => (\r\n             <ColumnDirective key={index} {...item} />\r\n           ))}\r\n"
+                },
+                {
+                    "date": 1665730861489,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -19,9 +19,9 @@\n const Orders = () => {\r\n   return (\r\n     <div className=\"m-2 md:m-10 p-2 md:p-10 bg-white rounded-3xl\">\r\n       <Header title=\"Orders\" category=\"Page\" />\r\n-      <GridComponent id=\"gridcomp\" dataSource={ordersData}>\r\n+      <GridComponent id=\"gridcomp\" dataSource={ordersData} className=\"m-2\">\r\n         <ColumnsDirective>\r\n           {ordersGrid.map((item, index) => (\r\n             <ColumnDirective key={index} {...item} />\r\n           ))}\r\n"
+                },
+                {
+                    "date": 1665730894087,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -19,9 +19,9 @@\n const Orders = () => {\r\n   return (\r\n     <div className=\"m-2 md:m-10 p-2 md:p-10 bg-white rounded-3xl\">\r\n       <Header title=\"Orders\" category=\"Page\" />\r\n-      <GridComponent id=\"gridcomp\" dataSource={ordersData} className=\"m-2\">\r\n+      <GridComponent id=\"gridcomp\" dataSource={ordersData}>\r\n         <ColumnsDirective>\r\n           {ordersGrid.map((item, index) => (\r\n             <ColumnDirective key={index} {...item} />\r\n           ))}\r\n"
+                },
+                {
+                    "date": 1665730922507,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -19,15 +19,17 @@\n const Orders = () => {\r\n   return (\r\n     <div className=\"m-2 md:m-10 p-2 md:p-10 bg-white rounded-3xl\">\r\n       <Header title=\"Orders\" category=\"Page\" />\r\n-      <GridComponent id=\"gridcomp\" dataSource={ordersData}>\r\n-        <ColumnsDirective>\r\n-          {ordersGrid.map((item, index) => (\r\n-            <ColumnDirective key={index} {...item} />\r\n-          ))}\r\n-        </ColumnsDirective>\r\n-      </GridComponent>\r\n+      <div className=\"m-2\">\r\n+        <GridComponent id=\"gridcomp\" dataSource={ordersData}>\r\n+          <ColumnsDirective>\r\n+            {ordersGrid.map((item, index) => (\r\n+              <ColumnDirective key={index} {...item} />\r\n+            ))}\r\n+          </ColumnsDirective>\r\n+        </GridComponent>\r\n+      </div>\r\n     </div>\r\n   )\r\n }\r\n \r\n"
+                },
+                {
+                    "date": 1665730929990,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -19,9 +19,9 @@\n const Orders = () => {\r\n   return (\r\n     <div className=\"m-2 md:m-10 p-2 md:p-10 bg-white rounded-3xl\">\r\n       <Header title=\"Orders\" category=\"Page\" />\r\n-      <div className=\"m-2\">\r\n+      <div className=\"mt-2\">\r\n         <GridComponent id=\"gridcomp\" dataSource={ordersData}>\r\n           <ColumnsDirective>\r\n             {ordersGrid.map((item, index) => (\r\n               <ColumnDirective key={index} {...item} />\r\n"
+                },
+                {
+                    "date": 1665730936430,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -19,9 +19,9 @@\n const Orders = () => {\r\n   return (\r\n     <div className=\"m-2 md:m-10 p-2 md:p-10 bg-white rounded-3xl\">\r\n       <Header title=\"Orders\" category=\"Page\" />\r\n-      <div className=\"mt-2\">\r\n+      <div className=\"mt-10\">\r\n         <GridComponent id=\"gridcomp\" dataSource={ordersData}>\r\n           <ColumnsDirective>\r\n             {ordersGrid.map((item, index) => (\r\n               <ColumnDirective key={index} {...item} />\r\n"
+                },
+                {
+                    "date": 1665730978112,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -19,17 +19,15 @@\n const Orders = () => {\r\n   return (\r\n     <div className=\"m-2 md:m-10 p-2 md:p-10 bg-white rounded-3xl\">\r\n       <Header title=\"Orders\" category=\"Page\" />\r\n-      <div className=\"mt-10\">\r\n-        <GridComponent id=\"gridcomp\" dataSource={ordersData}>\r\n-          <ColumnsDirective>\r\n-            {ordersGrid.map((item, index) => (\r\n-              <ColumnDirective key={index} {...item} />\r\n-            ))}\r\n-          </ColumnsDirective>\r\n-        </GridComponent>\r\n-      </div>\r\n+      <GridComponent id=\"gridcomp\" dataSource={ordersData}>\r\n+        <ColumnsDirective>\r\n+          {ordersGrid.map((item, index) => (\r\n+            <ColumnDirective key={index} {...item} />\r\n+          ))}\r\n+        </ColumnsDirective>\r\n+      </GridComponent>\r\n     </div>\r\n   )\r\n }\r\n \r\n"
+                },
+                {
+                    "date": 1665731543632,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -19,9 +19,9 @@\n const Orders = () => {\r\n   return (\r\n     <div className=\"m-2 md:m-10 p-2 md:p-10 bg-white rounded-3xl\">\r\n       <Header title=\"Orders\" category=\"Page\" />\r\n-      <GridComponent id=\"gridcomp\" dataSource={ordersData}>\r\n+      <GridComponent id=\"gridcomp\" dataSource={ordersData} allowPaging>\r\n         <ColumnsDirective>\r\n           {ordersGrid.map((item, index) => (\r\n             <ColumnDirective key={index} {...item} />\r\n           ))}\r\n"
+                },
+                {
+                    "date": 1665731693258,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -25,8 +25,20 @@\n           {ordersGrid.map((item, index) => (\r\n             <ColumnDirective key={index} {...item} />\r\n           ))}\r\n         </ColumnsDirective>\r\n+        <Inject\r\n+          services={[\r\n+            Resize,\r\n+            Sort,\r\n+            ContextMenu,\r\n+            Filter,\r\n+            Page,\r\n+            ExcelExport,\r\n+            Edit,\r\n+            PdfExport,\r\n+          ]}\r\n+        />\r\n       </GridComponent>\r\n     </div>\r\n   )\r\n }\r\n"
+                },
+                {
+                    "date": 1665731829221,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -19,9 +19,14 @@\n const Orders = () => {\r\n   return (\r\n     <div className=\"m-2 md:m-10 p-2 md:p-10 bg-white rounded-3xl\">\r\n       <Header title=\"Orders\" category=\"Page\" />\r\n-      <GridComponent id=\"gridcomp\" dataSource={ordersData} allowPaging>\r\n+      <GridComponent\r\n+        id=\"gridcomp\"\r\n+        dataSource={ordersData}\r\n+        allowPaging\r\n+        allowSorting\r\n+      >\r\n         <ColumnsDirective>\r\n           {ordersGrid.map((item, index) => (\r\n             <ColumnDirective key={index} {...item} />\r\n           ))}\r\n"
+                }
+            ],
+            "date": 1665729086907,
+            "name": "Commit-0",
+            "content": "import React from 'react'\r\nimport {\r\n  GridComponent,\r\n  ColumnDirective,\r\n  Resize,\r\n  Sort,\r\n  ContextMenu,\r\n  Filter,\r\n  Page,\r\n  ExcelExport,\r\n  PdfExport,\r\n  Edit,\r\n  Inject,\r\n} from '@syncfusion/ej2-react-grids'\r\nimport { ordersData, contextMenuItems, ordersGrid } from '../data/dummy'\r\nimport { Header } from '../components'\r\n\r\nconst Orders = () => {\r\n  return (\r\n    <div>\r\n      <Header title=\"Orders\" />\r\n    </div>\r\n  )\r\n}\r\n\r\nexport default Orders\r\n"
+        }
+    ]
+}

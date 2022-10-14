@@ -1,0 +1,50 @@
+{
+    "sourceFile": "src/components/Charts/Stacked.jsx",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 8,
+            "patches": [
+                {
+                    "date": 1665726702050,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1665726748742,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -14,9 +14,9 @@\n   stackedPrimaryXAxis,\r\n   stackedPrimaryYAxis,\r\n } from '../../data/dummy'\r\n \r\n-const Stacked = () => {\r\n+const Stacked = ({ width, height }) => {\r\n   return (\r\n     <ChartComponent>\r\n       <Inject services={[Legend, Category, StackingColumnSeries, Tooltip]} />\r\n     </ChartComponent>\r\n"
+                },
+                {
+                    "date": 1665727614806,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -16,10 +16,23 @@\n } from '../../data/dummy'\r\n \r\n const Stacked = ({ width, height }) => {\r\n   return (\r\n-    <ChartComponent>\r\n+    <ChartComponent\r\n+      width={width}\r\n+      height={height}\r\n+      id=\"stack chart\"\r\n+      // primaryXAxis={stackedPrimaryXAxis}\r\n+      // primaryYAxis={stackedPrimaryYAxis}\r\n+      chartArea={{ border: { width: 0 } }}\r\n+      Tooltip={{ enable: true }}\r\n+    >\r\n       <Inject services={[Legend, Category, StackingColumnSeries, Tooltip]} />\r\n+      <SeriesCollectionDirective>\r\n+        {stackedCustomSeries.map((item, index) => (\r\n+          <SeriesDirective key={index} {...item} />\r\n+        ))}\r\n+      </SeriesCollectionDirective>\r\n     </ChartComponent>\r\n   )\r\n }\r\n \r\n"
+                },
+                {
+                    "date": 1665727637491,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -20,10 +20,10 @@\n     <ChartComponent\r\n       width={width}\r\n       height={height}\r\n       id=\"stack chart\"\r\n-      // primaryXAxis={stackedPrimaryXAxis}\r\n-      // primaryYAxis={stackedPrimaryYAxis}\r\n+      primaryXAxis={stackedPrimaryXAxis}\r\n+      primaryYAxis={stackedPrimaryYAxis}\r\n       chartArea={{ border: { width: 0 } }}\r\n       Tooltip={{ enable: true }}\r\n     >\r\n       <Inject services={[Legend, Category, StackingColumnSeries, Tooltip]} />\r\n"
+                },
+                {
+                    "date": 1665727797626,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -7,9 +7,9 @@\n   Legend,\r\n   Category,\r\n   StackingColumnSeries,\r\n   Tooltip,\r\n-} from '@syncfusion/ej2-react-charts '\r\n+} from '@syncfusion/ej2-react-charts'\r\n import {\r\n   stackedCustomSeries,\r\n   stackedPrimaryXAxis,\r\n   stackedPrimaryYAxis,\r\n"
+                },
+                {
+                    "date": 1665727949254,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -19,9 +19,9 @@\n   return (\r\n     <ChartComponent\r\n       width={width}\r\n       height={height}\r\n-      id=\"stack chart\"\r\n+      id=\"charts\"\r\n       primaryXAxis={stackedPrimaryXAxis}\r\n       primaryYAxis={stackedPrimaryYAxis}\r\n       chartArea={{ border: { width: 0 } }}\r\n       Tooltip={{ enable: true }}\r\n"
+                },
+                {
+                    "date": 1665728051188,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -24,8 +24,9 @@\n       primaryXAxis={stackedPrimaryXAxis}\r\n       primaryYAxis={stackedPrimaryYAxis}\r\n       chartArea={{ border: { width: 0 } }}\r\n       Tooltip={{ enable: true }}\r\n+      legendSettings={{ background: white }}\r\n     >\r\n       <Inject services={[Legend, Category, StackingColumnSeries, Tooltip]} />\r\n       <SeriesCollectionDirective>\r\n         {stackedCustomSeries.map((item, index) => (\r\n"
+                },
+                {
+                    "date": 1665728066475,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -24,9 +24,9 @@\n       primaryXAxis={stackedPrimaryXAxis}\r\n       primaryYAxis={stackedPrimaryYAxis}\r\n       chartArea={{ border: { width: 0 } }}\r\n       Tooltip={{ enable: true }}\r\n-      legendSettings={{ background: white }}\r\n+      legendSettings={{ background: 'white' }}\r\n     >\r\n       <Inject services={[Legend, Category, StackingColumnSeries, Tooltip]} />\r\n       <SeriesCollectionDirective>\r\n         {stackedCustomSeries.map((item, index) => (\r\n"
+                },
+                {
+                    "date": 1665728087409,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -23,9 +23,9 @@\n       id=\"charts\"\r\n       primaryXAxis={stackedPrimaryXAxis}\r\n       primaryYAxis={stackedPrimaryYAxis}\r\n       chartArea={{ border: { width: 0 } }}\r\n-      Tooltip={{ enable: true }}\r\n+      tooltip={{ enable: true }}\r\n       legendSettings={{ background: 'white' }}\r\n     >\r\n       <Inject services={[Legend, Category, StackingColumnSeries, Tooltip]} />\r\n       <SeriesCollectionDirective>\r\n"
+                }
+            ],
+            "date": 1665726702050,
+            "name": "Commit-0",
+            "content": "import React from 'react'\r\nimport {\r\n  ChartComponent,\r\n  SeriesCollectionDirective,\r\n  SeriesDirective,\r\n  Inject,\r\n  Legend,\r\n  Category,\r\n  StackingColumnSeries,\r\n  Tooltip,\r\n} from '@syncfusion/ej2-react-charts '\r\nimport {\r\n  stackedCustomSeries,\r\n  stackedPrimaryXAxis,\r\n  stackedPrimaryYAxis,\r\n} from '../../data/dummy'\r\n\r\nconst Stacked = () => {\r\n  return (\r\n    <ChartComponent>\r\n      <Inject services={[Legend, Category, StackingColumnSeries, Tooltip]} />\r\n    </ChartComponent>\r\n  )\r\n}\r\n\r\nexport default Stacked\r\n"
+        }
+    ]
+}

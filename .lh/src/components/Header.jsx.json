@@ -1,0 +1,38 @@
+{
+    "sourceFile": "src/components/Header.jsx",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 5,
+            "patches": [
+                {
+                    "date": 1665729329741,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1665729445194,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,7 +1,7 @@\n import React from 'react'\r\n \r\n const Header = ({ category, title }) => {\r\n-  return <div>Header</div>\r\n+  return <div className=\"md-10\"></div>\r\n }\r\n \r\n export default Header\r\n"
+                },
+                {
+                    "date": 1665729469424,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,7 +1,11 @@\n import React from 'react'\r\n \r\n const Header = ({ category, title }) => {\r\n-  return <div className=\"md-10\"></div>\r\n+  return (\r\n+    <div className=\"md-10\">\r\n+      <p className=\"text-gray-400\"></p>\r\n+    </div>\r\n+  )\r\n }\r\n \r\n export default Header\r\n"
+                },
+                {
+                    "date": 1665729593152,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,9 +2,10 @@\n \r\n const Header = ({ category, title }) => {\r\n   return (\r\n     <div className=\"md-10\">\r\n-      <p className=\"text-gray-400\"></p>\r\n+      <p className=\"text-gray-400\">{category}</p>\r\n+      <p>{title}</p>\r\n     </div>\r\n   )\r\n }\r\n \r\n"
+                },
+                {
+                    "date": 1665729795830,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,9 +3,11 @@\n const Header = ({ category, title }) => {\r\n   return (\r\n     <div className=\"md-10\">\r\n       <p className=\"text-gray-400\">{category}</p>\r\n-      <p>{title}</p>\r\n+      <p className=\"text-3xl font-extrabold tracking-tight text-slate-900\">\r\n+        {title}\r\n+      </p>\r\n     </div>\r\n   )\r\n }\r\n \r\n"
+                },
+                {
+                    "date": 1665730971026,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,9 +3,9 @@\n const Header = ({ category, title }) => {\r\n   return (\r\n     <div className=\"md-10\">\r\n       <p className=\"text-gray-400\">{category}</p>\r\n-      <p className=\"text-3xl font-extrabold tracking-tight text-slate-900\">\r\n+      <p className=\"text-3xl font-extrabold tracking-tight text-slate-900 mb-10\">\r\n         {title}\r\n       </p>\r\n     </div>\r\n   )\r\n"
+                }
+            ],
+            "date": 1665729329741,
+            "name": "Commit-0",
+            "content": "import React from 'react'\r\n\r\nconst Header = ({ category, title }) => {\r\n  return <div>Header</div>\r\n}\r\n\r\nexport default Header\r\n"
+        }
+    ]
+}

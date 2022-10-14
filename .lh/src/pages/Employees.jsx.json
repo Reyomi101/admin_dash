@@ -1,0 +1,78 @@
+{
+    "sourceFile": "src/pages/Employees.jsx",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 15,
+            "patches": [
+                {
+                    "date": 1665732076337,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1665732099361,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -14,10 +14,11 @@\n   Inject,\r\n } from '@syncfusion/ej2-react-grids'\r\n import { ordersData, contextMenuItems, ordersGrid } from '../data/dummy'\r\n import { Header } from '../components'\r\n+import { Employees } from '.'\r\n \r\n-const Orders = () => {\r\n+const Employees = () => {\r\n   return (\r\n     <div className=\"m-2 md:m-10 p-2 md:p-10 bg-white rounded-3xl\">\r\n       <Header title=\"Orders\" category=\"Page\" />\r\n       <GridComponent\r\n@@ -47,5 +48,5 @@\n     </div>\r\n   )\r\n }\r\n \r\n-export default Orders\r\n+export default Employees\r\n"
+                },
+                {
+                    "date": 1665732146778,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,16 +2,9 @@\n import {\r\n   GridComponent,\r\n   ColumnDirective,\r\n   ColumnsDirective,\r\n-  Resize,\r\n-  Sort,\r\n-  ContextMenu,\r\n-  Filter,\r\n   Page,\r\n-  ExcelExport,\r\n-  PdfExport,\r\n-  Edit,\r\n   Inject,\r\n } from '@syncfusion/ej2-react-grids'\r\n import { ordersData, contextMenuItems, ordersGrid } from '../data/dummy'\r\n import { Header } from '../components'\r\n"
+                },
+                {
+                    "date": 1665732163766,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,8 +3,9 @@\n   GridComponent,\r\n   ColumnDirective,\r\n   ColumnsDirective,\r\n   Page,\r\n+  Search,\r\n   Inject,\r\n } from '@syncfusion/ej2-react-grids'\r\n import { ordersData, contextMenuItems, ordersGrid } from '../data/dummy'\r\n import { Header } from '../components'\r\n"
+                },
+                {
+                    "date": 1665732213493,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -6,9 +6,9 @@\n   Page,\r\n   Search,\r\n   Inject,\r\n } from '@syncfusion/ej2-react-grids'\r\n-import { ordersData, contextMenuItems, ordersGrid } from '../data/dummy'\r\n+import { employeesData, employeesGrid } from '../data/dummy'\r\n import { Header } from '../components'\r\n import { Employees } from '.'\r\n \r\n const Employees = () => {\r\n"
+                },
+                {
+                    "date": 1665732223254,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -21,9 +21,9 @@\n         allowPaging\r\n         allowSorting\r\n       >\r\n         <ColumnsDirective>\r\n-          {ordersGrid.map((item, index) => (\r\n+          {employeesData.map((item, index) => (\r\n             <ColumnDirective key={index} {...item} />\r\n           ))}\r\n         </ColumnsDirective>\r\n         <Inject\r\n"
+                },
+                {
+                    "date": 1665732241401,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -25,20 +25,9 @@\n           {employeesData.map((item, index) => (\r\n             <ColumnDirective key={index} {...item} />\r\n           ))}\r\n         </ColumnsDirective>\r\n-        <Inject\r\n-          services={[\r\n-            Resize,\r\n-            Sort,\r\n-            ContextMenu,\r\n-            Filter,\r\n-            Page,\r\n-            ExcelExport,\r\n-            Edit,\r\n-            PdfExport,\r\n-          ]}\r\n-        />\r\n+        <Inject services={[Page]} />\r\n       </GridComponent>\r\n     </div>\r\n   )\r\n }\r\n"
+                },
+                {
+                    "date": 1665732251266,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -25,9 +25,9 @@\n           {employeesData.map((item, index) => (\r\n             <ColumnDirective key={index} {...item} />\r\n           ))}\r\n         </ColumnsDirective>\r\n-        <Inject services={[Page]} />\r\n+        <Inject services={[Page, Search]} />\r\n       </GridComponent>\r\n     </div>\r\n   )\r\n }\r\n"
+                },
+                {
+                    "date": 1665732275802,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -21,9 +21,9 @@\n         allowPaging\r\n         allowSorting\r\n       >\r\n         <ColumnsDirective>\r\n-          {employeesData.map((item, index) => (\r\n+          {employeesGrid.map((item, index) => (\r\n             <ColumnDirective key={index} {...item} />\r\n           ))}\r\n         </ColumnsDirective>\r\n         <Inject services={[Page, Search]} />\r\n"
+                },
+                {
+                    "date": 1665732288723,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -16,9 +16,9 @@\n     <div className=\"m-2 md:m-10 p-2 md:p-10 bg-white rounded-3xl\">\r\n       <Header title=\"Orders\" category=\"Page\" />\r\n       <GridComponent\r\n         id=\"gridcomp\"\r\n-        dataSource={ordersData}\r\n+        dataSource={employeesData}\r\n         allowPaging\r\n         allowSorting\r\n       >\r\n         <ColumnsDirective>\r\n"
+                },
+                {
+                    "date": 1665732360151,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -8,9 +8,8 @@\n   Inject,\r\n } from '@syncfusion/ej2-react-grids'\r\n import { employeesData, employeesGrid } from '../data/dummy'\r\n import { Header } from '../components'\r\n-import { Employees } from '.'\r\n \r\n const Employees = () => {\r\n   return (\r\n     <div className=\"m-2 md:m-10 p-2 md:p-10 bg-white rounded-3xl\">\r\n"
+                },
+                {
+                    "date": 1665732395896,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -12,9 +12,9 @@\n \r\n const Employees = () => {\r\n   return (\r\n     <div className=\"m-2 md:m-10 p-2 md:p-10 bg-white rounded-3xl\">\r\n-      <Header title=\"Orders\" category=\"Page\" />\r\n+      <Header title=\"Employees\" category=\"Page\" />\r\n       <GridComponent\r\n         id=\"gridcomp\"\r\n         dataSource={employeesData}\r\n         allowPaging\r\n"
+                },
+                {
+                    "date": 1665732487763,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -14,12 +14,13 @@\n   return (\r\n     <div className=\"m-2 md:m-10 p-2 md:p-10 bg-white rounded-3xl\">\r\n       <Header title=\"Employees\" category=\"Page\" />\r\n       <GridComponent\r\n-        id=\"gridcomp\"\r\n+        toolbar={['Search']}\r\n         dataSource={employeesData}\r\n         allowPaging\r\n         allowSorting\r\n+        width={auto}\r\n       >\r\n         <ColumnsDirective>\r\n           {employeesGrid.map((item, index) => (\r\n             <ColumnDirective key={index} {...item} />\r\n"
+                },
+                {
+                    "date": 1665732499540,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -18,9 +18,9 @@\n         toolbar={['Search']}\r\n         dataSource={employeesData}\r\n         allowPaging\r\n         allowSorting\r\n-        width={auto}\r\n+        width=\"auto\"\r\n       >\r\n         <ColumnsDirective>\r\n           {employeesGrid.map((item, index) => (\r\n             <ColumnDirective key={index} {...item} />\r\n"
+                },
+                {
+                    "date": 1665732523902,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -5,8 +5,9 @@\n   ColumnsDirective,\r\n   Page,\r\n   Search,\r\n   Inject,\r\n+  Toolbar,\r\n } from '@syncfusion/ej2-react-grids'\r\n import { employeesData, employeesGrid } from '../data/dummy'\r\n import { Header } from '../components'\r\n \r\n"
+                },
+                {
+                    "date": 1665732603791,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -26,9 +26,9 @@\n           {employeesGrid.map((item, index) => (\r\n             <ColumnDirective key={index} {...item} />\r\n           ))}\r\n         </ColumnsDirective>\r\n-        <Inject services={[Page, Search]} />\r\n+        <Inject services={[Page, Search, Toolbar]} />\r\n       </GridComponent>\r\n     </div>\r\n   )\r\n }\r\n"
+                }
+            ],
+            "date": 1665732076337,
+            "name": "Commit-0",
+            "content": "import React from 'react'\r\nimport {\r\n  GridComponent,\r\n  ColumnDirective,\r\n  ColumnsDirective,\r\n  Resize,\r\n  Sort,\r\n  ContextMenu,\r\n  Filter,\r\n  Page,\r\n  ExcelExport,\r\n  PdfExport,\r\n  Edit,\r\n  Inject,\r\n} from '@syncfusion/ej2-react-grids'\r\nimport { ordersData, contextMenuItems, ordersGrid } from '../data/dummy'\r\nimport { Header } from '../components'\r\n\r\nconst Orders = () => {\r\n  return (\r\n    <div className=\"m-2 md:m-10 p-2 md:p-10 bg-white rounded-3xl\">\r\n      <Header title=\"Orders\" category=\"Page\" />\r\n      <GridComponent\r\n        id=\"gridcomp\"\r\n        dataSource={ordersData}\r\n        allowPaging\r\n        allowSorting\r\n      >\r\n        <ColumnsDirective>\r\n          {ordersGrid.map((item, index) => (\r\n            <ColumnDirective key={index} {...item} />\r\n          ))}\r\n        </ColumnsDirective>\r\n        <Inject\r\n          services={[\r\n            Resize,\r\n            Sort,\r\n            ContextMenu,\r\n            Filter,\r\n            Page,\r\n            ExcelExport,\r\n            Edit,\r\n            PdfExport,\r\n          ]}\r\n        />\r\n      </GridComponent>\r\n    </div>\r\n  )\r\n}\r\n\r\nexport default Orders\r\n"
+        }
+    ]
+}
