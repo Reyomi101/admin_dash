@@ -1,0 +1,42 @@
+{
+    "sourceFile": "src/pages/Calendar.jsx",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 6,
+            "patches": [
+                {
+                    "date": 1665736565712,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1665736678446,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -11,8 +11,9 @@\n   Inject,\r\n   Resize,\r\n   DragAndDrop,\r\n } from '@syncfusion/ej2-react-schedule'\r\n+import { DatePickerComponent } from '@syncfusion/ej2-react-calendars'\r\n \r\n const Calendar = () => {\r\n   return <div>Calendar</div>\r\n }\r\n"
+                },
+                {
+                    "date": 1665736842820,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,9 +1,9 @@\n import React from 'react'\r\n import {\r\n   ScheduleComponent,\r\n   ViewDirective,\r\n-  ViewsDirTypecast,\r\n+  ViewsDirective,\r\n   Day,\r\n   Week,\r\n   WorkWeek,\r\n   Month,\r\n@@ -12,8 +12,9 @@\n   Resize,\r\n   DragAndDrop,\r\n } from '@syncfusion/ej2-react-schedule'\r\n import { DatePickerComponent } from '@syncfusion/ej2-react-calendars'\r\n+import { scheduleData } from '../data/dummy'\r\n \r\n const Calendar = () => {\r\n   return <div>Calendar</div>\r\n }\r\n"
+                },
+                {
+                    "date": 1665737077408,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -13,10 +13,15 @@\n   DragAndDrop,\r\n } from '@syncfusion/ej2-react-schedule'\r\n import { DatePickerComponent } from '@syncfusion/ej2-react-calendars'\r\n import { scheduleData } from '../data/dummy'\r\n+import { Header } from '../components'\r\n \r\n const Calendar = () => {\r\n-  return <div>Calendar</div>\r\n+  return (\r\n+    <div className=\"m-2 md:m-10 my-24 p-2 md:p-10 bg-white rounded-3xl\">\r\n+      <Header category=\"App\" title=\"Calendar\" />\r\n+    </div>\r\n+  )\r\n }\r\n \r\n export default Calendar\r\n"
+                },
+                {
+                    "date": 1665737485084,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -19,8 +19,13 @@\n const Calendar = () => {\r\n   return (\r\n     <div className=\"m-2 md:m-10 my-24 p-2 md:p-10 bg-white rounded-3xl\">\r\n       <Header category=\"App\" title=\"Calendar\" />\r\n+      <ScheduleComponent>\r\n+        <Inject\r\n+          services={[Day, Week, WorkWeek, Month, Agenda, Resize, DragAndDrop]}\r\n+        />\r\n+      </ScheduleComponent>\r\n     </div>\r\n   )\r\n }\r\n \r\n"
+                },
+                {
+                    "date": 1665739632600,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -19,9 +19,9 @@\n const Calendar = () => {\r\n   return (\r\n     <div className=\"m-2 md:m-10 my-24 p-2 md:p-10 bg-white rounded-3xl\">\r\n       <Header category=\"App\" title=\"Calendar\" />\r\n-      <ScheduleComponent>\r\n+      <ScheduleComponent height=\"650px\">\r\n         <Inject\r\n           services={[Day, Week, WorkWeek, Month, Agenda, Resize, DragAndDrop]}\r\n         />\r\n       </ScheduleComponent>\r\n"
+                },
+                {
+                    "date": 1665739952965,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -19,9 +19,13 @@\n const Calendar = () => {\r\n   return (\r\n     <div className=\"m-2 md:m-10 my-24 p-2 md:p-10 bg-white rounded-3xl\">\r\n       <Header category=\"App\" title=\"Calendar\" />\r\n-      <ScheduleComponent height=\"650px\">\r\n+      <ScheduleComponent\r\n+        height=\"650px\"\r\n+        eventSettings={{ dataSource: scheduleData }}\r\n+        selectedDate={new Date(2021, 0, 10)}\r\n+      >\r\n         <Inject\r\n           services={[Day, Week, WorkWeek, Month, Agenda, Resize, DragAndDrop]}\r\n         />\r\n       </ScheduleComponent>\r\n"
+                }
+            ],
+            "date": 1665736565712,
+            "name": "Commit-0",
+            "content": "import React from 'react'\r\nimport {\r\n  ScheduleComponent,\r\n  ViewDirective,\r\n  ViewsDirTypecast,\r\n  Day,\r\n  Week,\r\n  WorkWeek,\r\n  Month,\r\n  Agenda,\r\n  Inject,\r\n  Resize,\r\n  DragAndDrop,\r\n} from '@syncfusion/ej2-react-schedule'\r\n\r\nconst Calendar = () => {\r\n  return <div>Calendar</div>\r\n}\r\n\r\nexport default Calendar\r\n"
+        }
+    ]
+}

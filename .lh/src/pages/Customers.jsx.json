@@ -1,0 +1,38 @@
+{
+    "sourceFile": "src/pages/Customers.jsx",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 5,
+            "patches": [
+                {
+                    "date": 1665733291726,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1665733916952,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,20 +2,39 @@\n import {\r\n   GridComponent,\r\n   ColumnDirective,\r\n   ColumnsDirective,\r\n-  Resize,\r\n+  Page,\r\n+  Selection,\r\n+  Inject,\r\n+  Edit,\r\n+  Toolbar,\r\n   Sort,\r\n-  ContextMenu,\r\n   Filter,\r\n-  Page,\r\n-  ExcelExport,\r\n-  PdfExport,\r\n-  Edit,\r\n-  Inject,\r\n } from '@syncfusion/ej2-react-grids'\r\n \r\n+import { customersData, customersGrid } from '../data/dummy'\r\n+import { Header } from '../components'\r\n+\r\n const Customers = () => {\r\n-  return <div>Customers</div>\r\n+  return (\r\n+    <div className=\"m-2 md:m-10 p-2 md:p-10 bg-white rounded-3xl\">\r\n+      <Header title=\"Employees\" category=\"Page\" />\r\n+      <GridComponent\r\n+        toolbar={['Search']}\r\n+        dataSource={employeesData}\r\n+        allowPaging\r\n+        allowSorting\r\n+        width=\"auto\"\r\n+      >\r\n+        <ColumnsDirective>\r\n+          {employeesGrid.map((item, index) => (\r\n+            <ColumnDirective key={index} {...item} />\r\n+          ))}\r\n+        </ColumnsDirective>\r\n+        <Inject services={[Page, Search, Toolbar]} />\r\n+      </GridComponent>\r\n+    </div>\r\n+  )\r\n }\r\n \r\n export default Customers\r\n"
+                },
+                {
+                    "date": 1665733932606,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -20,15 +20,15 @@\n     <div className=\"m-2 md:m-10 p-2 md:p-10 bg-white rounded-3xl\">\r\n       <Header title=\"Employees\" category=\"Page\" />\r\n       <GridComponent\r\n         toolbar={['Search']}\r\n-        dataSource={employeesData}\r\n+        dataSource={customersData}\r\n         allowPaging\r\n         allowSorting\r\n         width=\"auto\"\r\n       >\r\n         <ColumnsDirective>\r\n-          {employeesGrid.map((item, index) => (\r\n+          {customersGrid.map((item, index) => (\r\n             <ColumnDirective key={index} {...item} />\r\n           ))}\r\n         </ColumnsDirective>\r\n         <Inject services={[Page, Search, Toolbar]} />\r\n"
+                },
+                {
+                    "date": 1665733947331,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -19,9 +19,8 @@\n   return (\r\n     <div className=\"m-2 md:m-10 p-2 md:p-10 bg-white rounded-3xl\">\r\n       <Header title=\"Employees\" category=\"Page\" />\r\n       <GridComponent\r\n-        toolbar={['Search']}\r\n         dataSource={customersData}\r\n         allowPaging\r\n         allowSorting\r\n         width=\"auto\"\r\n@@ -30,9 +29,9 @@\n           {customersGrid.map((item, index) => (\r\n             <ColumnDirective key={index} {...item} />\r\n           ))}\r\n         </ColumnsDirective>\r\n-        <Inject services={[Page, Search, Toolbar]} />\r\n+        <Inject services={[Page, Toolbar]} />\r\n       </GridComponent>\r\n     </div>\r\n   )\r\n }\r\n"
+                },
+                {
+                    "date": 1665733956463,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -17,9 +17,9 @@\n \r\n const Customers = () => {\r\n   return (\r\n     <div className=\"m-2 md:m-10 p-2 md:p-10 bg-white rounded-3xl\">\r\n-      <Header title=\"Employees\" category=\"Page\" />\r\n+      <Header title=\"Customers\" category=\"Page\" />\r\n       <GridComponent\r\n         dataSource={customersData}\r\n         allowPaging\r\n         allowSorting\r\n"
+                },
+                {
+                    "date": 1665734632921,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -23,15 +23,17 @@\n         dataSource={customersData}\r\n         allowPaging\r\n         allowSorting\r\n         width=\"auto\"\r\n+        toolbar={['Delete']}\r\n+        editSettings={{ allowDeleting: true, allowEditing: true }}\r\n       >\r\n         <ColumnsDirective>\r\n           {customersGrid.map((item, index) => (\r\n             <ColumnDirective key={index} {...item} />\r\n           ))}\r\n         </ColumnsDirective>\r\n-        <Inject services={[Page, Toolbar]} />\r\n+        <Inject services={[Page, Toolbar, Selection, Edit, Sort, Filter]} />\r\n       </GridComponent>\r\n     </div>\r\n   )\r\n }\r\n"
+                }
+            ],
+            "date": 1665733291726,
+            "name": "Commit-0",
+            "content": "import React from 'react'\r\nimport {\r\n  GridComponent,\r\n  ColumnDirective,\r\n  ColumnsDirective,\r\n  Resize,\r\n  Sort,\r\n  ContextMenu,\r\n  Filter,\r\n  Page,\r\n  ExcelExport,\r\n  PdfExport,\r\n  Edit,\r\n  Inject,\r\n} from '@syncfusion/ej2-react-grids'\r\n\r\nconst Customers = () => {\r\n  return <div>Customers</div>\r\n}\r\n\r\nexport default Customers\r\n"
+        }
+    ]
+}
